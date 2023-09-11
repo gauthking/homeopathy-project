@@ -1,11 +1,38 @@
+import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { IoArrowBackSharp } from "react-icons/io5";
+import { AiOutlineClose } from "react-icons/ai";
 import { IconObject } from "../types";
+import { GiHamburgerMenu } from "react-icons/gi";
 
+/**
+ * Icon types for the Icons object.
+ */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+type IconType =
+  | React.ElementType
+  | ((props: React.SVGProps<SVGSVGElement>) => JSX.Element);
+
+/**
+ * @typedef {Object} Icons - IconObject representing various icons.
+ * @property {IconType} google - Google icon from react-icons.
+ * @property {IconType} arrowback - Arrowback icon from react-icons.
+ * @property {IconType} close - Close icon from react-icons.
+ * @property {IconType} Hamburger - Hamburger icon from react-icons.
+ * @property {IconType} logo - Custom SVG logo function with SVGProps.
+ */
 export const Icons: IconObject = {
   google: FcGoogle,
   arrowback: IoArrowBackSharp,
+  close: AiOutlineClose,
+  Hamburger: GiHamburgerMenu,
   logo: (props: React.SVGProps<SVGSVGElement>) => (
+    /**
+     * Custom SVG logo function.
+     *
+     * @param {React.SVGProps<SVGSVGElement>} props - SVG props for the logo.
+     * @returns {JSX.Element} - Returns a JSX element representing the custom logo.
+     */
     <svg
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"

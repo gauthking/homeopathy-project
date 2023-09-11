@@ -2,7 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#4200FF",
+        border: "4200FF",
+        destructive: "#f43f5e",
+      },
+    },
   },
-  plugins: [],
 };
+
+export const plugins = [import("tailwindcss-animate")];
