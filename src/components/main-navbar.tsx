@@ -10,7 +10,7 @@ import CustomButton from "@/components/common/custom-btn";
 const MainNavbar = () => {
   return (
     // Main navigation container with hidden class for responsive design.
-    <div className="h-10 hidden w-full xl:px-4 border items-center md:flex justify-between">
+    <div className="h-10 hidden w-full xl:px-4 items-center md:flex justify-between">
       <div>
         {/* Logo and title */}
         <h1 className="flex text-xl gap-1 font-semibold whitespace-nowrap capitalize">
