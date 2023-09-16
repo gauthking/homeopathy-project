@@ -8,6 +8,9 @@ export default {
         border: "4200FF",
         destructive: "#f43f5e",
       },
+      backgroundImage: {
+        pattern: "url('/save.gif')",
+      },
     },
   },
 };

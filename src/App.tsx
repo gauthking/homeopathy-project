@@ -2,8 +2,8 @@ import MainNavbar from "@/components/main-navbar";
 import PageContainer from "@/components/page-container";
 import UseUserDataWrapper from "@/hooks/UseUserDataWrapper";
 import MobileNavbar from "@/components/mobile-navbar";
-import HeroSection from "@/components/hero-section";
 import FooterSection from "./components/footer";
+import { Outlet } from "react-router";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
        */}
       <main className="min-h-screen flex justify-center">
         <PageContainer>
-          <HeroSection />
+          <Outlet />
         </PageContainer>
       </main>
       {/** Footer section */}

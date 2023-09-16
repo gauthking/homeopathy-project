@@ -8,9 +8,16 @@ import {
   Route,
   createRoutesFromElements,
 } from "react-router-dom";
+import History from "./history";
+import LandingPage from "./landingPage";
 
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route path="/" element={<App />} />)
+  createRoutesFromElements(
+    <Route path="/" element={<App />}>
+      <Route path="/" index element={<LandingPage />} />
+      <Route path="/history" element={<History />} />
+    </Route>
+  )
 );
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

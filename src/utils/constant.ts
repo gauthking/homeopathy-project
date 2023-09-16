@@ -11,18 +11,11 @@ export const NavbarInfo: INAV_INFO[] = [
     href: "/",
   },
   {
-    // Define the title of the "Contact" navigation item.
-    title: "Contact",
+    // Define the title of the "History" navigation item.
+    title: "History",
 
-    // Specify the URL for the "Contact" page.
-    href: "/contact",
-  },
-  {
-    // Define the title of the "Service" navigation item.
-    title: "Service",
-
-    // Specify the URL for the "Service" page.
-    href: "/services",
+    // Specify the URL for the "History" page.
+    href: "/history",
   },
   {
     // Define the title of the "Doctors" navigation item.
@@ -36,6 +29,6 @@ export const NavbarInfo: INAV_INFO[] = [
     title: "About us",
 
     // Specify the URL for the "About us" page.
-    href: "/about-us",
+    href: "#about",
   },
 ];

@@ -29,12 +29,15 @@ const FooterSection: React.FC<FooterSectionProps> = (
     event.preventDefault();
     // Create a FormData object to capture form data
     const formData = new FormData(formRef.current as HTMLFormElement);
-    console.log(formData.values);
+    const name = formData.get("name")?.toString();
+    const subject = formData.get("subject")?.toString();
+    const email = formData.get("email")?.toString();
+    const message = formData.get("message")?.toString();
   };
 
   return (
     // Footer section with form submission
-    <footer onSubmit={handleSubmit} className="bg-zinc-100 py-20">
+    <footer id="footer" onSubmit={handleSubmit} className="bg-zinc-100 py-20">
       {/* PageContainer component with grid layout */}
       <PageContainer className="grid h-full space-y-20 lg:grid-cols-2 border-3">
         {/* Left column containing branding and navigation */}
@@ -43,7 +46,7 @@ const FooterSection: React.FC<FooterSectionProps> = (
             <div>
               {/* Logo and title */}
               <h1 className="flex text-4xl gap-1 font-semibold whitespace-nowrap capitalize">
-                Harmony <span className="text-primary">Heal</span>
+                Joy <span className="text-primary">Homeo</span>
               </h1>
               <p className="text-xs mx-0.5 mt-1 italic">
                 Unleash the Power of Natural Healing with Homeopathy
@@ -126,6 +129,19 @@ const FooterSection: React.FC<FooterSectionProps> = (
               title="Please enter a valid name"
               // ARIA attributes for accessibility
               aria-label="Your Name"
+              aria-required={true}
+            />
+            <CustomInput
+              required
+              label="Subject"
+              type="text"
+              name="subject"
+              placeholder="Subject..."
+              minLength={2}
+              maxLength={100}
+              title="Please enter a valid Subject"
+              // ARIA attributes for accessibility
+              aria-label="Subject"
               aria-required={true}
             />
             {/* Custom input for email */}

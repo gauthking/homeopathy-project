@@ -14,7 +14,7 @@ const MainNavbar = () => {
       <div>
         {/* Logo and title */}
         <h1 className="flex text-xl gap-1 font-semibold whitespace-nowrap capitalize">
-          Harmony <span className="text-primary">Heal</span>
+          Joy <span className="text-primary">Homeo</span>
         </h1>
       </div>
       <nav className="space-x-4">
@@ -22,9 +22,9 @@ const MainNavbar = () => {
         {NavbarInfo.map((item, index) => {
           return (
             // Navigation link with font style and route
-            <Link className="font-medium text-sm" to={item.href} key={index}>
+            <a className="font-medium text-sm" href={item.href} key={index}>
               {item.title}
-            </Link>
+            </a>
           );
         })}
       </nav>

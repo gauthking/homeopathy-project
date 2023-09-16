@@ -5,7 +5,6 @@ import CompleteDrawer from "@/components/common/drawer";
 import { Icons } from "@/components/icons";
 import PageContainer from "@/components/page-container";
 import { NavbarInfo } from "@/utils/constant";
-import { Link } from "react-router-dom";
 
 /**
  * MobileNavbar component represents the mobile version of the navigation bar.
@@ -26,10 +25,10 @@ const MobileNavbar = () => {
   };
 
   return (
-    <div className="flex md:hidden py-2 justify-between">
+    <div className="flex md:hidden px-1 md:py-auto py-2 justify-between">
       <div>
         <h1 className="flex text-xl gap-1 font-semibold whitespace-nowrap capitalize">
-          Harmony <span className="text-primary">Heal</span>
+          Joy <span className="text-primary">Homeo</span>
         </h1>
       </div>
       {/* Render CompleteDrawer for mobile navigation */}
@@ -43,13 +42,9 @@ const MobileNavbar = () => {
             {/* Map over NavbarInfo to render navigation links */}
             {NavbarInfo.map((item, index) => {
               return (
-                <Link
-                  className="font-medium text-sm"
-                  to={item.href}
-                  key={index}
-                >
+                <a className="font-medium text-sm" href={item.href} key={index}>
                   {item.title}
-                </Link>
+                </a>
               );
             })}
           </nav>
