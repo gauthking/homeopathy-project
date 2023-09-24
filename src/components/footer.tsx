@@ -50,18 +50,18 @@ const FooterSection = () => {
             Contact Us
           </h1>
           <p className=" text-lg text-justify text-gray-500">
-            Address No.47, 2nd street, Bunder garden, Perambur, Chennai 600 011
+            Address No.47, 2nd street, Bunder garden, Perambur, Chennai 600011
             Opposite Perambur Lourdes shrine church and Sen hospital <br />
-            Ph No: 97890 12442
+            Ph-No : 97890 12442
           </p>
           <h1 className="text-start w-full text-3xl md:text-5xl font-extralight">
             Timings
           </h1>
 
           <p className=" text-lg text-justify text-gray-500">
-            Morning:11.30am to 2.30pm <br /> Evening: 7pm to 10pm <br /> Sunday
-            evenings only: 7pm to 10pm <br /> Consultation on appointment basis.{" "}
-            <br /> Please call and fix your appointment priorl
+            Morning : 11.30am to 2.30pm <br /> Evening : 7pm to 10pm <br />{" "}
+            Sunday evenings only : 7pm to 10pm <br /> Consultation on
+            appointment basis. <br /> Please call and fix your appointment.
           </p>
 
           <h1 className="text-start w-full text-3xl md:text-5xl font-extralight">
