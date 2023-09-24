@@ -9,12 +9,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
  * Icon types for the Icons object.
  */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-type IconType =
-  | React.ElementType
-  | ((props: React.SVGProps<SVGSVGElement>) => JSX.Element);
 
 /**
- * @typedef {Object} Icons - IconObject representing various icons.
  * @property {IconType} google - Google icon from react-icons.
  * @property {IconType} arrowback - Arrowback icon from react-icons.
  * @property {IconType} close - Close icon from react-icons.
