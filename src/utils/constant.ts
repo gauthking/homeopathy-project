@@ -17,13 +17,7 @@ export const NavbarInfo: INAV_INFO[] = [
     // Specify the URL for the "History" page.
     href: "/history",
   },
-  {
-    // Define the title of the "Doctors" navigation item.
-    title: "Doctors",
 
-    // Specify the URL for the "Doctors" page.
-    href: "/doctors",
-  },
   {
     // Define the title of the "About us" navigation item.
     title: "About us",

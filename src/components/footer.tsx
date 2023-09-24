@@ -1,43 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useRef } from "react";
-import CustomButton from "./common/custom-btn";
-import CustomInput from "./common/custom-input";
-import CustomTextArea from "./common/custom-text-area";
 import PageContainer from "./page-container";
-import { Link } from "react-router-dom";
-
-/**
- * @interface FooterSectionProps - Props for the FooterSection component.
- */
-interface FooterSectionProps {}
-
-/**
- * FooterSection Component
- * @props {FooterSectionProps} props - The component props.
- */
-const FooterSection: React.FC<FooterSectionProps> = (
-  _props: FooterSectionProps
-) => {
-  // Create a reference for the form element
-  const formRef = useRef<HTMLFormElement>(null);
-
-  /**
-   * Handles form submission
-   * @param {React.FormEvent<HTMLFormElement>} event - The form submission event.
-   */
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    // Create a FormData object to capture form data
-    const formData = new FormData(formRef.current as HTMLFormElement);
-    const name = formData.get("name")?.toString();
-    const subject = formData.get("subject")?.toString();
-    const email = formData.get("email")?.toString();
-    const message = formData.get("message")?.toString();
-  };
-
+const FooterSection = () => {
   return (
     // Footer section with form submission
-    <footer id="footer" onSubmit={handleSubmit} className="bg-zinc-100 py-20">
+    <footer id="footer" className="bg-zinc-100 py-20 px-10 text-xl">
       {/* PageContainer component with grid layout */}
       <PageContainer className="grid h-full space-y-20 lg:grid-cols-2 border-3">
         {/* Left column containing branding and navigation */}
@@ -51,129 +16,82 @@ const FooterSection: React.FC<FooterSectionProps> = (
               <p className="text-xs mx-0.5 mt-1 italic">
                 Unleash the Power of Natural Healing with Homeopathy
               </p>
-              <div className="w-full bg-neutral-200 my-4 h-[1px]"></div>
-              <div className="grid grid-cols-2 py-4 h-full ">
-                {/* Navigation links */}
-                <ul>
-                  <li>
-                    <Link
-                      className="text-sm relative after:absolute after:bottom-0
-                      after:left-0 hover:after:w-full after:transition-all after:content-[''] after:bg-black after:h-[.2px] after:w-0"
-                      to={"/#"}
-                    >
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="text-sm relative after:absolute after:bottom-0
-                      after:left-0 hover:after:w-full after:transition-all after:content-[''] after:bg-black after:h-[.2px] after:w-0"
-                      to={"/#"}
-                    >
-                      Contact
-                    </Link>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <Link
-                      className="text-sm relative after:absolute after:bottom-0
-                      after:left-0 hover:after:w-full after:transition-all after:content-[''] after:bg-black after:h-[.2px] after:w-0"
-                      to={"/#"}
-                    >
-                      Service
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="text-sm relative after:absolute after:bottom-0
-                      after:left-0 hover:after:w-full after:transition-all after:content-[''] after:bg-black after:h-[.2px] after:w-0"
-                      to={"/#"}
-                    >
-                      About us
-                    </Link>
-                  </li>
-                </ul>
+              <div className="w-full bg-neutral-200  h-[1px]"></div>
+              <div className="flex items-center justify-center h-full ">
+                <div className="mapembed">
+                  <h1 className="text-3xl text-center font-semibold my-6">
+                    Reach us
+                  </h1>
+                  <iframe
+                    className="w-72 h-72 md:h-[400px] md:w-[400px]"
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3885.8035536311813!2d80.23944867507889!3d13.111627987216838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDA2JzQxLjkiTiA4MMKwMTQnMzEuMyJF!5e0!3m2!1sen!2sin!4v1695201871366!5m2!1sen!2sin"
+                    width="600"
+                    height="450"
+                    loading="lazy"
+                  ></iframe>
+                </div>
               </div>
             </div>
 
             {/* Address information */}
-            <p className="max-w-[400px] text-xs font-light text-justify text-neutral-400">
+            {/* <p className="max-w-[400px] text-xs font-light text-justify text-neutral-400">
               Address No.47, 2nd street, Bunder garden, Perambur, Chennai 600
               011 Opposite Perambur Lourdes shrine church and Sen hospital
-            </p>
+            </p> */}
           </div>
           {/* Vertical separator */}
           <div className="lg:h-full w-full h-[.4px] mt-10 lg:mt-auto bg-neutral-200 lg:w-[.4px]"></div>
         </div>
 
         {/* Right column containing contact form */}
-        <div className="flex flex-col space-y-6 justify-center px-4 items-center">
+        <div className="flex flex-col space-y-6 px-4">
           {/* Contact Us title */}
-          <h1 className="text-start w-full text-5xl font-extralight">
+          <h1 className="text-start w-full text-3xl md:text-5xl font-extralight">
             Contact Us
           </h1>
+          <p className=" text-lg text-justify text-gray-500">
+            Address No.47, 2nd street, Bunder garden, Perambur, Chennai 600 011
+            Opposite Perambur Lourdes shrine church and Sen hospital <br />
+            Ph No: 97890 12442
+          </p>
+          <h1 className="text-start w-full text-3xl md:text-5xl font-extralight">
+            Timings
+          </h1>
 
-          {/* Form with custom input fields */}
-          <form ref={formRef} className="flex w-full flex-col gap-y-2">
-            {/* Custom input for name */}
-            <CustomInput
-              required
-              label="name"
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              minLength={2}
-              maxLength={50}
-              pattern="[A-Za-z\s]+"
-              title="Please enter a valid name"
-              // ARIA attributes for accessibility
-              aria-label="Your Name"
-              aria-required={true}
-            />
-            <CustomInput
-              required
-              label="Subject"
-              type="text"
-              name="subject"
-              placeholder="Subject..."
-              minLength={2}
-              maxLength={100}
-              title="Please enter a valid Subject"
-              // ARIA attributes for accessibility
-              aria-label="Subject"
-              aria-required={true}
-            />
-            {/* Custom input for email */}
-            <CustomInput
-              required
-              label="email"
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
-              title="Please enter a valid email address"
-              // ARIA attributes for accessibility
-              aria-label="Your Email"
-              aria-required={true}
-            />
-            {/* Custom text area for message */}
-            <CustomTextArea
-              required
-              label="message"
-              minLength={10}
-              maxLength={500}
-              name="message"
-              title="Please enter a message between 10 and 500 characters"
-              // ARIA attributes for accessibility
-              aria-label="Message"
-              aria-required={true}
-            />
-            {/* Custom button for form submission */}
-            <CustomButton className="border w-full mt-2 cursor-pointer bg-primary text-white rounded text-xs font-medium hover:bg-primary/80 py-1.5 px-2">
-              Send Message
-            </CustomButton>
-          </form>
+          <p className=" text-lg text-justify text-gray-500">
+            Morning:11.30am to 2.30pm <br /> Evening: 7pm to 10pm <br /> Sunday
+            evenings only: 7pm to 10pm <br /> Consultation on appointment basis.{" "}
+            <br /> Please call and fix your appointment priorl
+          </p>
+
+          <h1 className="text-start w-full text-3xl md:text-5xl font-extralight">
+            Payment Info
+          </h1>
+
+          <p className=" text-lg text-justify text-gray-500">
+            Account transfer State Bank of India <br />
+            Name : OSWIN DELPHINA MARIAM S <br />
+            Account No : 31691713934 <br />
+            IFSC CODE : SBIN0011715
+            <br />
+            BANK : STATE BANK OF INDIA
+            <br />
+            Branch : Kodungaiyur
+            <br />
+          </p>
+
+          <p className="font-semibold">
+            Google Pay Number :{" "}
+            <div className="font-light flex items-center  gap-3">
+              <p> +91 8778801371</p>
+              {/* <a
+                href="upi://pay?pa=peter17in@oksbi&amp;pn=Peter&amp;cu=INR"
+                className=" bg-primary text-white font-medium rounded-md cursor-pointer hover:bg-primary/80 p-1 text-sm"
+              >
+                Click Here
+              </a> */}
+            </div>
+          </p>
         </div>
       </PageContainer>
     </footer>

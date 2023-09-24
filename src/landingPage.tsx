@@ -7,8 +7,8 @@ const LandingPage = () => {
     <>
       {" "}
       <HeroSection />
-      <AboutSection />
       <Subscribe />
+      <AboutSection />
     </>
   );
 };
