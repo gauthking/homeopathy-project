@@ -1,5 +1,3 @@
-import CustomButton from "@/components/common/custom-btn";
-
 const History = () => {
   return (
     <section className="flex flex-col items-center justify-center p-10 gap-10">
