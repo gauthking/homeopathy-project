@@ -1,5 +1,3 @@
-import CustomButton from "./common/custom-btn";
-
 const AboutSection = () => {
   return (
     <main className="">
