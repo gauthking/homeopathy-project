@@ -23,6 +23,6 @@ export const NavbarInfo: INAV_INFO[] = [
     title: "About us",
 
     // Specify the URL for the "About us" page.
-    href: "#about",
+    href: "/#about",
   },
 ];

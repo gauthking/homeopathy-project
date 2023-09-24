@@ -20,7 +20,11 @@ const MainNavbar = () => {
         {NavbarInfo.map((item, index) => {
           return (
             // Navigation link with font style and route
-            <a className="font-medium text-lg" href={item.href} key={index}>
+            <a
+              className="font-medium text-lg rounded-lg hover:bg-blue-400 hover:rounded-xl transition-all ease-in-out p-2"
+              href={item.href}
+              key={index}
+            >
               {item.title}
             </a>
           );
