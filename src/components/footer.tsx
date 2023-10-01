@@ -59,9 +59,10 @@ const FooterSection = () => {
           </h1>
 
           <p className=" text-lg text-justify text-gray-500">
-            Morning : 11.30am to 2.30pm <br /> Evening : 7pm to 10pm <br />{" "}
-            Sunday evenings only : 7pm to 10pm <br /> Consultation on
-            appointment basis. <br /> Please call and fix your appointment.
+            Monday - Saturday <br /> Morning : 11.30am to 2.30pm <br /> Evening
+            : 7pm to 10pm <br /> Sunday evenings only : 7pm to 10pm <br />{" "}
+            Consultation on appointment basis. <br /> Please call and fix your
+            appointment.
           </p>
 
           <h1 className="text-start w-full text-3xl md:text-5xl font-extralight">
@@ -69,7 +70,7 @@ const FooterSection = () => {
           </h1>
 
           <p className=" text-lg text-justify text-gray-500">
-            Account transfer State Bank of India <br />
+            Account Transfer: <br /> State Bank of India <br />
             Name : OSWIN DELPHINA MARIAM S <br />
             Account No : 31691713934 <br />
             IFSC CODE : SBIN0011715
@@ -83,7 +84,7 @@ const FooterSection = () => {
           <p className="font-semibold">
             Google Pay Number :{" "}
             <div className="font-light flex items-center  gap-3">
-              <p> +91 8778801371</p>
+              <p>+91 8778801371</p>
               {/* <a
                 href="upi://pay?pa=peter17in@oksbi&amp;pn=Peter&amp;cu=INR"
                 className=" bg-primary text-white font-medium rounded-md cursor-pointer hover:bg-primary/80 p-1 text-sm"

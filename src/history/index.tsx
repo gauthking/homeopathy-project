@@ -1,6 +1,6 @@
 const History = () => {
   return (
-    <section className="flex flex-col items-center justify-center p-10 gap-10">
+    <section className="flex flex-col items-center justify-center p-10 gap-10 bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-stone-400 via-slate-200 to-sky-100">
       <div className="text-center">
         <h3 className="font-bold text-3xl">History</h3>
         <h1 className="font-medium text-3xl">
@@ -54,6 +54,43 @@ const History = () => {
           homeopathy
         </p>
       </div>
+
+      <div className="text-center">
+        <h3 className="font-semibold text-3xl">Depression - Flower Medicine</h3>
+      </div>
+
+      <p className="text-lg md:text-xl text-justify text-neutral-800">
+        Depression is a mood disorder where a person has the persistent feeling
+        of sadness or low mood. It can happen due to a variety of reasons. But
+        people in depression slowly lose interest in everything and find
+        everything meaningless. Some of the symptoms of depression are angry
+        outbursts, feeling of sadness, sleep disturbances and loss of interest.
+        Speaking of gentle ways of healing depression, Dr.Edward Bach says,
+        "Brightening someone's day with a heartfelt compliment, challenging
+        depression with opposite actions, collecting moments that make your
+        heart smile, embracing lifelong learning, and crafting a feel-good
+        playlist. These steps are my gentle push through depression – a reminder
+        that small actions can lead to big healing. Discovering your path to
+        mental wellness is an unique journey.
+      </p>
+
+      <img
+        src={"/flower.png"}
+        className=" border rounded-lg w-80"
+        alt="loading..."
+      />
+
+      <p className="text-lg md:text-xl text-justify text-neutral-800">
+        <b>Flower Medicines</b> With so much going on around us, it’s easy to
+        feel overwhelmed from time to time. By using Dr.Edward Bach's Original
+        Flower Remedies, you can balance your emotions and fulfill your
+        potential in a natural, time-tested way.* The flower remedies were
+        developed so that the key to overall health was to care for the mind as
+        well as the body. It helps to promote emotional wellbeing. It was
+        designed to help you gain an understanding of your own emotions, and
+        support you as you find emotional balance through an individual,
+        personalized approach.
+      </p>
     </section>
   );
 };

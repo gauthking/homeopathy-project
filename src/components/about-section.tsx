@@ -1,6 +1,6 @@
 const AboutSection = () => {
   return (
-    <main className="">
+    <main className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-300 via-stone-300 to-gray-100 py-5">
       <section
         id={"about"}
         className="grid p-4 sm:p-auto md:grid-cols-2 px-10 gap-10"
@@ -78,11 +78,19 @@ const AboutSection = () => {
           More About us
         </CustomButton> */}
         </div>
-        <img
-          src={"/doctor1.jpg"}
-          className=" border rounded-lg"
-          alt="loading..."
-        />
+        <div className="flex flex-col">
+          <img
+            alt="loading..."
+            src={"/doctor1.jpg"}
+            className=" border rounded-lg"
+          />
+          <div className="relative bottom-12 p-3 backdrop-blur-lg opacity-80 bg-slate-600">
+            <p className="font-bold text-white" style={{ zIndex: 1 }}>
+              {" "}
+              Dr Oswin Delphina Mariam
+            </p>
+          </div>
+        </div>
       </section>
     </main>
   );
