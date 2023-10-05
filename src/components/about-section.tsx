@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 const AboutSection = () => {
   const ref = useRef<HTMLElement>(null);
-  const [offset, setOffset] = useState(["0 1", "1.6 3.5"]);
+  const [offset, setOffset] = useState<any>(["0 1", "1.6 3.5"]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -28,7 +28,7 @@ const AboutSection = () => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: offset,
+    offset,
   });
   return (
     <motion.main
