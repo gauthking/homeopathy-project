@@ -1,6 +1,44 @@
+import { motion, useScroll } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+
 const AboutSection = () => {
+  const ref = useRef<HTMLElement>(null);
+  const [offset, setOffset] = useState(["0 1", "1.6 3.5"]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 640) {
+        setOffset(["0 1", "1.6 4.7"]); // Adjust the offset for mobile screens
+      } else {
+        setOffset(["0 1", "1.6 3.5"]);
+      }
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: offset,
+  });
   return (
-    <main className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-300 via-stone-300 to-gray-100 py-5">
+    <motion.main
+      style={{
+        scale: scrollYProgress,
+        opacity: scrollYProgress,
+      }}
+      ref={ref}
+      className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-300 via-stone-300 to-gray-100 py-5"
+    >
       <section
         id={"about"}
         className="grid p-4 sm:p-auto md:grid-cols-2 px-10 gap-10"
@@ -31,9 +69,7 @@ const AboutSection = () => {
             commuting to this establishment as there are various modes of
             transport readily available. It is at Bundar Garden 2nd Street ,
             Near Subiksha Nursing Home, which makes it easy for first-time
-            visitors in locating this establishment. It is known to provide top
-            service in the following categories: Clinics, Homeopathic Clinics,
-            Piles Doctors.
+            visitors in locating this establishment.
           </p>
           {/* <CustomButton className="max-w-fit mt-4 bg-primary text-white font-medium rounded-md cursor-pointer hover:bg-primary/80 px-6 py-2 text-sm">
           More About us
@@ -42,7 +78,7 @@ const AboutSection = () => {
       </section>
       <section
         id={"about"}
-        className="grid p-4 sm:p-auto md:grid-cols-2 px-10 my-16"
+        className="grid p-4 sm:p-auto md:grid-cols-2 px-10 my-16 gap-10"
       >
         <div className="flex flex-col justify-center gap-y-2">
           <h3 className="font-bold text-3xl">From the Desk of Chief Doctor</h3>
@@ -92,7 +128,7 @@ const AboutSection = () => {
           </div>
         </div>
       </section>
-    </main>
+    </motion.main>
   );
 };
 

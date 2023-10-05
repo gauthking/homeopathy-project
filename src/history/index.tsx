@@ -1,6 +1,24 @@
+import { motion } from "framer-motion";
 const History = () => {
   return (
-    <section className="flex flex-col items-center justify-center p-10 gap-10 bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-stone-400 via-slate-200 to-sky-100">
+    <motion.section
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: {
+          scale: 0.7,
+          opacity: 0,
+        },
+        visible: {
+          scale: 1,
+          opacity: 1,
+          transition: {
+            delay: 0.3,
+          },
+        },
+      }}
+      className="flex flex-col items-center justify-center p-10 gap-10 bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-stone-400 via-slate-200 to-sky-100"
+    >
       <div className="text-center">
         <h3 className="font-bold text-3xl">History</h3>
         <h1 className="font-medium text-3xl">
@@ -26,7 +44,7 @@ const History = () => {
           without any hazards or harm. It is suitable for adults, children and
           pregnant or breastfeeding women.
         </p>
-        <div className="flex flex-col md:flex-row items-center gap-2">
+        <div className="flex flex-col md:flex-row md:items-center gap-10">
           <img
             src={"/med.png"}
             className=" border rounded-lg w-80"
@@ -73,12 +91,18 @@ const History = () => {
         that small actions can lead to big healing. Discovering your path to
         mental wellness is an unique journey.
       </p>
-
-      <img
-        src={"/flower.png"}
-        className=" border rounded-lg w-80"
-        alt="loading..."
-      />
+      <div className="flex flex-col md:flex-row md:justify-evenly gap-10">
+        <img
+          src={"/flower.png"}
+          className=" border rounded-lg w-80"
+          alt="loading..."
+        />
+        <img
+          src={"/flower1.png"}
+          className=" border rounded-lg w-80"
+          alt="loading..."
+        />
+      </div>
 
       <p className="text-lg md:text-xl text-justify text-neutral-800">
         <b>Flower Medicines</b> With so much going on around us, it’s easy to
@@ -91,7 +115,7 @@ const History = () => {
         support you as you find emotional balance through an individual,
         personalized approach.
       </p>
-    </section>
+    </motion.section>
   );
 };
 

@@ -8,7 +8,7 @@ import { Outlet } from "react-router";
 function App() {
   return (
     <UseUserDataWrapper>
-      <PageContainer>
+      <PageContainer className="max-w-7xl m-auto">
         <MainNavbar />
         <MobileNavbar />
       </PageContainer>

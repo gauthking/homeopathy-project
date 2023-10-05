@@ -5,13 +5,13 @@ import Subscribe from "./components/subscribe";
 
 const LandingPage = () => {
   return (
-    <>
+    <main className="max-w-7xl m-auto">
       {" "}
       <HeroSection />
       <Subscribe />
       <AboutSection />
       <Services />
-    </>
+    </main>
   );
 };
 

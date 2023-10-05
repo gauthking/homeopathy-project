@@ -1,6 +1,44 @@
+import { useScroll, motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+
 const Subscribe = () => {
+  const ref = useRef<HTMLElement>(null);
+  const [offset, setOffset] = useState(["0 1", "1.6 3.5"]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 640) {
+        setOffset(["0 1", "1 1.4"]); // Adjust the offset for mobile screens
+      } else {
+        setOffset(["0 1", "1.4 1.1"]);
+      }
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: offset,
+  });
   return (
-    <div className="relative overflow-hidden p-10">
+    <motion.main
+      style={{
+        scale: scrollYProgress,
+        opacity: scrollYProgress,
+      }}
+      ref={ref}
+      className="relative overflow-hidden p-10"
+    >
       <h1 className="text-3xl font-bold text-center">
         Our Treatments in Chennai{" "}
       </h1>
@@ -29,7 +67,7 @@ const Subscribe = () => {
           <p>Dandruff </p>
         </div>
       </div>
-    </div>
+    </motion.main>
   );
 };
 
