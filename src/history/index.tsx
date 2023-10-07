@@ -51,7 +51,7 @@ const History = () => {
             alt="loading..."
           />
           <img
-            src={"/med1.png"}
+            src={"/flower1.png"}
             className=" border rounded-lg w-80"
             alt="loading..."
           />
@@ -98,7 +98,7 @@ const History = () => {
           alt="loading..."
         />
         <img
-          src={"/flower1.png"}
+          src={"/med1.png"}
           className=" border rounded-lg w-80"
           alt="loading..."
         />

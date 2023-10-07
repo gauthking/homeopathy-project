@@ -8,7 +8,7 @@ const AboutSection = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 640) {
-        setOffset(["0 1", "1.6 4.7"]); // Adjust the offset for mobile screens
+        setOffset(["0 1", "1.6 4.8"]); // Adjust the offset for mobile screens
       } else {
         setOffset(["0 1", "1.6 3.5"]);
       }
