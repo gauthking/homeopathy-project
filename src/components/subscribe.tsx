@@ -61,7 +61,7 @@ const Subscribe = () => {
     offset: offset,
   });
 
-  const handleClick = (disease) => {
+  const handleClick = (disease: any) => {
     setSelectedDisease(disease);
     setContentVisible(!contentVisible);
   };
