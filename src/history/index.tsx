@@ -91,6 +91,7 @@ const History = () => {
         that small actions can lead to big healing. Discovering your path to
         mental wellness is an unique journey.
       </p>
+
       <div className="flex flex-col md:flex-row md:justify-evenly gap-10">
         <img
           src={"/flower.png"}
@@ -115,6 +116,59 @@ const History = () => {
         support you as you find emotional balance through an individual,
         personalized approach.
       </p>
+
+      <p className="text-lg md:text-xl text-justify text-neutral-800">
+        <b>Flower Medicine</b> in homeopathy are prepared from the flowers of
+        wild bushes, plants and trees, also known as <b>Flower Essences</b>.
+        Flowers are the crowning experience of a plant’s growth and thus they
+        have the highest concentration of life force within them.{" "}
+        <b>Flower Medicine</b> have gentle,yet profound healing powers, the
+        energy or vibration taken from the flowers gently affects our body and
+        mind on subtle levels.
+      </p>
+
+      <div className="flex flex-col md:flex-row md:justify-evenly">
+        <img
+          src={"/flowe2.jpg"}
+          className=" border rounded-lg w-80"
+          alt="loading..."
+        />
+      </div>
+
+      <p className="text-lg md:text-xl text-justify text-neutral-800">
+        <b>Flower Medicine</b> heals the mind,body and spirit. When peace and
+        harmony return to the mind,health and strength automatically return to
+        the body. <b>Flower Medicine</b> can never produce an unpleasant
+        reaction under any condition. They are safe to use and enables a person
+        to get healed mentally. They can be taken with any other kind of
+        medicine with absolute safety. None of them is harmful or habit forming.
+        They’re prescribed according to the patient’s state of mind, according
+        to their moods of -
+        <div className="flex flex-col my-2">
+          <li>Fear</li>
+          <li>Anger</li>
+          <li>Stress</li>
+          <li>Suicidal Thoughts</li>
+          <li>Discouragement</li>
+        </div>
+      </p>
+
+      <div className="p-4 border-2 border-gray-300 bg-slate-200 rounded-2xl shadow-md m-5 flex-col">
+        <p className="font-normal text-lg md:text-xl">
+          <span className="font-extrabold text-2xl mx-1 mb-2">"</span>I had
+          suicidal thoughts and depression. After taking flower medicines
+          prescribed by the doctor, I'm feeling much better. I'm calm and
+          peaceful. I feel happy and confident. I can handle things easily now.
+          There's so much of relief from stress. I am able to concentrate in my
+          studies and I got good marks in the last examination. I'm active and
+          healthy. I'm sleeping well. Thank You Doctor!{" "}
+          <span className="font-extrabold text-2xl mx-1">"</span>
+        </p>
+        <i className="float-right m-3 text-xs md:text-sm">
+          -Testimony by a Class 12 Student in Chennai after taking Flower
+          Medicine for Suicidal Tendencies
+        </i>
+      </div>
     </motion.section>
   );
 };

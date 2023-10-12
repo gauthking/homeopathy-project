@@ -8,40 +8,40 @@ const Subscribe = () => {
   const [contentVisible, setContentVisible] = useState(false);
   const treatments: Array<{ name: string; description: string }> = [
     {
-      name: "Arthritis",
+      name: "Metabolic Health",
       description:
-        "Homeopathy eases arthritis with natural remedies like Arnica and Rhus tox, reducing pain and inflammation. It supports the body's innate healing for lasting relief.",
+        "Homeopathy offers remedies that are believed to support the body's natural processes, potentially aiding in the dissolution of kidney and gall stones. Additionally, it aims to regulate blood sugar levels in diabetes and stabilize blood pressure.",
     },
     {
-      name: "Migraine",
+      name: "Mental Health",
       description:
-        "Homeopathy offers relief from migraines through remedies like Belladonna and Iris versicolor. It targets triggers and reduces the frequency and intensity of migraine attacks.",
+        "Homeopathy is thought to provide treatments for various psychiatric ailments. By considering the individual's specific symptoms and constitution, homeopathic remedies aim to restore mental balance and well-being.",
     },
     {
-      name: "Dandruff",
+      name: "Pain Management",
       description:
-        "Homeopathy effectively treats dandruff with remedies like Sulphur and Kali sulphuricum. It targets the root causes, promoting a healthy scalp and preventing recurrence.",
+        "Homeopathy targets different types of pain including headaches, as well as pain in the shoulders, back, arms, legs, and joints. It seeks to understand the underlying causes and offers remedies that may alleviate discomfort and promote healing.",
     },
     {
-      name: "Insomnia",
+      name: "Dermatological Conditions",
       description:
-        "Homeopathy offers natural solutions for insomnia. Remedies like Coffea cruda and Passiflora incarnata help calm the mind, promoting restful sleep without side effects.",
+        "Homeopathy addresses skin ailments, dermatitis, and insect bites by considering the unique symptoms and reactions of each individual. Remedies are selected to potentially soothe irritation, promote healing, and reduce inflammation.",
     },
     {
-      name: "Hair Loss",
+      name: "General Well-being",
       description:
-        "Homeopathy addresses hair loss by targeting underlying causes and stimulating hair growth. Remedies like Silicea and Lycopodium aid in strengthening hair follicles and reducing hair fall.",
+        "Homeopathy seeks to enhance overall well-being by focusing on immunity and weight control. Remedies are chosen to potentially strengthen the body's defenses and support healthy metabolic processes.",
     },
     {
-      name: "Thyroid",
+      name: "Metabolism & Arthritis",
       description:
-        "Homeopathy supports thyroid function with remedies like Thyroidinum and Iodium. It helps regulate hormonal imbalances, providing relief from symptoms associated with thyroid disorders.",
+        "Homeopathy may offer treatments to support metabolic functions and provide relief for arthritis. Remedies are selected based on the specific symptoms and constitution of each individual, potentially alleviating pain and inflammation associated with these conditions.",
     },
   ];
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 640) {
-        setOffset(["0 1", "1 1.3"]);
+        setOffset(["0 1", "1 1.6"]);
       } else {
         setOffset(["0 1", "1.4 1.5"]);
       }
@@ -81,10 +81,10 @@ const Subscribe = () => {
       <div className="grid grid-cols-1 my-10 md:grid-cols-3 gap-6 py-10">
         {treatments.map((treatment) => (
           <div
-            className="treatmentsbox flex flex-col items-center justify-center px-2 text-sm md:text-lg font-medium border-2 border-gray-100 bg-slate-100 rounded-2xl gap-4 shadow-lg shadow-gray-200 cursor-pointer min-h-[120px] md:min-h-[230px]"
+            className="treatmentsbox flex flex-col items-center justify-center px-2 text-sm md:text-lg font-medium border-2 border-gray-200 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-300 via-gray-300 to-slate-300 rounded-2xl gap-2 shadow-lg shadow-gray-200 cursor-pointer min-h-[120px] md:min-h-[230px]"
             onClick={() => handleClick(treatment.name)}
           >
-            <p className=" mt-4 md:hover:bg-slate-300 md:rounded-lg md:p-2">
+            <p className="mt-2 md:hover:bg-slate-300 md:rounded-lg md:p-2">
               {treatment.name}
             </p>
             {selectedDisease === treatment.name && contentVisible && (
@@ -104,7 +104,7 @@ const Subscribe = () => {
                     },
                   },
                 }}
-                className="p-2 rounded-md max-w-xs text-sm font-light text-center my-6 md:my-2"
+                className="p-2 rounded-md max-w-xs text-sm font-light text-center"
               >
                 {treatment.description}
               </motion.p>

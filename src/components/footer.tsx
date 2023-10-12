@@ -44,7 +44,7 @@ const FooterSection = () => {
         </div>
 
         {/* Right column containing contact form */}
-        <div className="flex flex-col space-y-6 px-4">
+        <div className="flex flex-col space-y-10 md:space-x-6 px-4">
           {/* Contact Us title */}
           <h1 className="text-start w-full text-3xl md:text-5xl font-extralight">
             Contact Us
