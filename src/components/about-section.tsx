@@ -36,13 +36,11 @@ const AboutSection = () => {
         scale: scrollYProgress,
         opacity: scrollYProgress,
       }}
+      id={"about"}
       ref={ref}
       className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-300 via-stone-300 to-gray-100 py-5"
     >
-      <section
-        id={"about"}
-        className="grid p-4 sm:p-auto md:grid-cols-2 px-10 gap-10"
-      >
+      <section className="grid p-4 sm:p-auto md:grid-cols-2 px-10 gap-10">
         <img
           src={"/shop.jpg"}
           className=" border rounded-lg"
