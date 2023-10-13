@@ -11,9 +11,11 @@ const MainNavbar = () => {
     <div className="h-10 hidden w-full xl:px-4 items-center md:flex justify-between p-8">
       <div>
         {/* Logo and title */}
-        <h1 className="flex text-3xl gap-1 font-semibold whitespace-nowrap capitalize">
-          Joy <span className="text-primary">Homeo</span>
-        </h1>
+        <a href="/">
+          <h1 className="flex text-3xl gap-1 font-semibold whitespace-nowrap capitalize">
+            Joy <span className="text-primary">Homeo</span>
+          </h1>
+        </a>
       </div>
       <nav className="space-x-8">
         {/* Render navigation links */}

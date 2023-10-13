@@ -25,7 +25,7 @@ const MobileNavbar = () => {
   };
 
   return (
-    <div className="flex md:hidden px-1 md:py-auto py-2 justify-between">
+    <div className="flex m-2 md:hidden px-1 md:py-auto py-2 justify-between">
       <div>
         <h1 className="flex text-xl gap-1 font-semibold whitespace-nowrap capitalize">
           Joy <span className="text-primary">Homeo</span>
@@ -42,7 +42,7 @@ const MobileNavbar = () => {
             {/* Map over NavbarInfo to render navigation links */}
             {NavbarInfo.map((item, index) => {
               return (
-                <a className="font-medium text-sm" href={item.href} key={index}>
+                <a className="font-medium text-lg" href={item.href} key={index}>
                   {item.title}
                 </a>
               );

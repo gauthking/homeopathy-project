@@ -104,7 +104,7 @@ const Subscribe = () => {
                     },
                   },
                 }}
-                className="p-2 rounded-md max-w-xs text-sm font-light text-center"
+                className="p-4 rounded-md max-w-xs text-sm font-light text-center"
               >
                 {treatment.description}
               </motion.p>
