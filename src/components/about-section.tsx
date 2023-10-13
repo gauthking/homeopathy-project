@@ -53,8 +53,8 @@ const AboutSection = () => {
           <h1 className="font-medium text-3xl">We help Your Health</h1>
           <p className=" text-lg text-justify  text-neutral-800 max-w-[600px]">
             Joy Homeo Clinic in Perambur, Chennai is a top player in the
-            category Homeopathic Clinics in the Chennai. This well-known
-            establishment acts as a one-stop destination servicing customers
+            category Homeopathic Clinics in Chennai. This well-known
+            establishment acts as an one-stop destination servicing customers
             both local and from other parts of Chennai. Over the course of its
             journey, this business has established a firm foothold in it’s
             industry. The belief that customer satisfaction is as important as
@@ -67,7 +67,7 @@ const AboutSection = () => {
             to a larger client base. In Chennai, this establishment occupies a
             prominent location in Perambur. It is an effortless task in
             commuting to this establishment as there are various modes of
-            transport readily available. It is at Bundar Garden 2nd Street ,
+            transport readily available. It is at Bunder Garden 2nd Street ,
             Near Subiksha Nursing Home, which makes it easy for first-time
             visitors in locating this establishment.
           </p>
