@@ -84,7 +84,7 @@ const FooterSection = () => {
           <p className="font-semibold">
             Google Pay Number :{" "}
             <div className="font-light flex items-center  gap-3">
-              <p>+91 8778801371</p>
+              <p>+91 9789012442</p>
               {/* <a
                 href="upi://pay?pa=peter17in@oksbi&amp;pn=Peter&amp;cu=INR"
                 className=" bg-primary text-white font-medium rounded-md cursor-pointer hover:bg-primary/80 p-1 text-sm"
