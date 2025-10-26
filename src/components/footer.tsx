@@ -60,7 +60,7 @@ const FooterSection = () => {
 
           <p className=" text-lg text-justify text-gray-500">
             Monday - Saturday <br /> Morning : 11.30am to 2.30pm <br /> Evening
-            : 7pm to 10pm <br /> Sunday evenings only : 7pm to 10pm <br />{" "}
+            : 6pm to 9pm <br /> Sunday evenings only : 6pm to 9pm <br />{" "}
             Consultation on appointment basis. <br /> Please call and fix your
             appointment.
           </p>
